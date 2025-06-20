@@ -132,3 +132,12 @@ This project is open-source and free to use under the [MIT License](LICENSE).
 async functions can be used when you are dealing with the DB.
 In fastAPI, you can mix these 2 approaches - synchronous and async functions.
 Automatic interactive AI docs are generated with the Swagger UI - localhost:9999/docs
+
+### Testing
+
+We use pytest.
+
+1. Install httpx, pytest - pip install httpx , pip install pytest
+2. Create functions with a name that starts with test\_ (this is standard pytest conventions).
+3. Filename - test\_<File_To_Be_Tested>.py ==== test_main.py
+4.
