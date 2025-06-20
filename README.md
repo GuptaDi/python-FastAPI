@@ -131,4 +131,4 @@ This project is open-source and free to use under the [MIT License](LICENSE).
 
 async functions can be used when you are dealing with the DB.
 In fastAPI, you can mix these 2 approaches - synchronous and async functions.
-Automatic docs are generated with the Swagger UI - localhost:9999/docs
+Automatic interactive AI docs are generated with the Swagger UI - localhost:9999/docs

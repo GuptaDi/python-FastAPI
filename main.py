@@ -1,5 +1,6 @@
 """
-This module helps
+This module is an advanced version of todoApp file.
+With proper typings, and a better documentation feature.
 """
 from enum import IntEnum
 from typing import List, Optional
@@ -16,6 +17,7 @@ class Priority(IntEnum):
     HIGH = 1
 
 
+# define the parent class
 class TodoBase(BaseModel):
     todo_name: str = Field(..., min_length=3, max_length=512,
                            description='Name of the todo')
@@ -24,14 +26,17 @@ class TodoBase(BaseModel):
         default=Priority.LOW, description='Priority of the todo')
 
 
+# it will just inherit the base class. While creation I want to add all these fields.
 class TodoCreate(TodoBase):
     pass
 
 
+# This class we created as our response model. So, it will have all the fields.
 class Todo(TodoBase):
     todo_id: int = Field(..., description='Unique identifier of the todo')
 
 
+# During update, I dont have to update all the fields at the same time. So, I am adding optional.
 class TodoUpdate(BaseModel):
     todo_name: Optional[str] = Field(
         None, min_length=3, max_length=512, description='Name of the todo')
